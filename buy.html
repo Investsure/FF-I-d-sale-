@@ -101,12 +101,13 @@
     });
 
     // Load price from localStorage
+  <script>
   window.addEventListener("DOMContentLoaded", () => {
     const price = localStorage.getItem("selectedPrice");
-    if (price) {
-      document.getElementById("priceBox").innerText = price + " TK";
-    }
+    document.getElementById("priceBox").innerText = price + " TK";
   });
+</script>
+    
 
     // Select method
     window.selectMethod = function(method) {
