@@ -102,10 +102,19 @@
 
     // Load price from localStorage
     document.addEventListener('DOMContentLoaded', () => {
-      const price = localStorage.getItem('purchaseAmount') || '৳990';
-      document.getElementById('priceBox').innerText = price;
-      selectMethod('bkash'); // default
-    });
+  const price = localStorage.getItem('purchaseAmount'); // প্রাইসটি localStorage থেকে নেওয়া হচ্ছে।
+  
+  if (!price) {
+    // যদি প্রাইস না থাকে, ডিফল্ট প্রাইস সেট করুন
+    localStorage.setItem('purchaseAmount', '৳990');
+    document.getElementById('priceBox').innerText = '৳990'; // priceBox এ ডিফল্ট প্রাইস সেট করা হচ্ছে
+  } else {
+    // যদি প্রাইস পাওয়া যায়, সেগুলো প্রাইসবক্সে প্রদর্শন করুন
+    document.getElementById('priceBox').innerText = price;
+  }
+
+  selectMethod('bkash'); // ডিফল্টভাবে Bkash নির্বাচন করা হচ্ছে
+});
 
     // Select method
     window.selectMethod = function(method) {
