@@ -101,11 +101,13 @@
     });
 
     // Load price from localStorage
-    document.addEventListener('DOMContentLoaded', () => {
-      const price = localStorage.getItem('purchaseAmount') || '৳990';
-      document.getElementById('priceBox').innerText = price;
-      selectMethod('bkash'); // default
-    });
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const price = localStorage.getItem("selectedPrice");
+    if (price) {
+      document.getElementById("priceBox").innerText = price + " TK";
+    }
+  });
 
     // Select method
     window.selectMethod = function(method) {
