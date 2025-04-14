@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zerox ID Sale BD</title>
+  
+  <!-- Google Fonts (Bengali + Icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Noto Sans Bengali', sans-serif;
+    }
+
+    .zerox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #111 40%, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .zerox-box {
+      background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+      border: 2px solid #FFD700;
+      border-radius: 20px;
+      padding: 30px 25px;
+      max-width: 450px;
+      width: 90%;
+      color: #ffffff;
+      box-shadow: 0 0 30px #ffd70080;
+      position: relative;
+      animation: popIn 0.6s ease-out;
+      text-align: center;
+    }
+
+    .zerox-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .zerox-header h2 {
+      font-size: 26px;
+      color: #FFD700;
+      margin: 0;
+    }
+
+    .premium-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .popup-text p {
+      font-size: 17px;
+      color: #eaeaea;
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .thanks {
+      font-weight: bold;
+      color: #00ffc3;
+      margin-top: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      color: #ff6666;
+      font-size: 26px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Zerox Premium Popup -->
+  <div id="zerox-popup" class="zerox-overlay">
+    <div class="zerox-box">
+      <span class="material-icons close-btn" onclick="document.getElementById('zerox-popup').style.display='none'">close</span>
+      <div class="zerox-header">
+        <img src="https://assets.onecompiler.app/43ea4pg72/43etpeenw/gamer.gif" alt="Premium Icon" class="premium-icon"/>
+        <h2>Zerox ID Sale BD</h2>
+      </div>
+      <div class="popup-text">
+        <p>আপনার বিশ্বস্ত গেমিং আইডি <span class="highlight">Buy/Sale</span> প্ল্যাটফর্ম!</p>
+        <p>এখন থেকে আপনার পছন্দমতো আইডি সহজেই <span class="highlight">ক্রয়</span> বা <span class="highlight">বিক্রয়</span> করুন নিরাপদভাবে।</p>
+        <p>প্রতারণা এড়াতে আমাদের বিশ্বস্ত সার্ভিস ব্যবহার করুন এবং নিশ্চিন্তে লেনদেন করুন।</p>
+        <p class="thanks">ধন্যবাদ আমাদের সাথে থাকার জন্য!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Listings</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons+Round|Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .menu {
+      position: relative;
+      cursor: pointer;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+    }
+    .dropdown a:hover {
+      background-color: #f2f2f2;
+    }
+    .list-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+    .premium-card {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+    }
+    .image-slider img {
+      width: 100%;
+      display: none;
+      border-radius: 12px;
+    }
+    .details {
+      padding: 15px;
+      background: #fff;
+      border-radius: 12px;
+      margin-top: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .details h3 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+    }
+    .details p {
+      margin: 6px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .material-icons-outlined.premium {
+      color: #FFD700;
+    }
+    .button-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .buy-button, .desc-button {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .buy-button:hover, .desc-button:hover {
+      background: linear-gradient(135deg, #764ba2, #667eea);
+    }
+  </style>
+</head>
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+  /* Scoped CSS only for Zerox Notice */
+  .zerox-notice-bar {
+    background: linear-gradient(90deg, #222831, #1c1f26);
+    color: #fefefe;
+    padding: 10px 15px;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 14px;
+    border-left: 4px solid #f5b301;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .zerox-notice-bar .material-icons-outlined {
+    color: #f5b301;
+    margin-right: 8px;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .zerox-notice-text {
+    white-space: nowrap;
+    display: inline-block;
+    animation: zerox-scroll-left 15s linear infinite;
+  }
+
+  @keyframes zerox-scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
+
+<!-- Notice Bar -->
+<div class="zerox-notice-bar">
+  <span class=""></span>
+  <div class="zerox-notice-text">
+    আমাদের সার্ভিস সকাল 10 টা থেকে রাত 10 টা পর্যন্ত খোলা থাকে । এখানে কম দামে সেরা ফ্রি ফায়ার আইডি ক্রয় করতে পারবেন যা একদম বিশ্বস্ত
+  </div>
+</div>
+
+<body><header>
+
+  <h2><span class="material-icons-outlined">stars</span>ZEROX ID SALE BD </h2>
+  <div class="menu" onclick="toggleMenu()">
+    <span class="material-icons">more_vert</span>
+    <div class="dropdown" id="menuDropdown">
+      <a href="dashboard.html"><span class="material-icons-round">home</span>হোম</a>
+      <a href="blog.html"><span class="material-icons-round">rss_feed</span>ব্লগ</a>
+      <a href="support.html"><span class="material-icons-round">support_agent</span>সাপোর্ট</a>
+    </div>
+  </div>
+  
+</header><div class="list-container">
+<!-- Meta Tag for Character Encoding (to ensure proper rendering of Bengali text) -->
+<meta charset="UTF-8">
+
+<!-- Google Icons & Bengali Safe Fonts -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+
+<style>
+  .verified-message-box {
+    background: linear-gradient(90deg, #1c1f26, #0e1014);
+    border-left: 4px solid #00e676;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 255, 150, 0.15);
+    margin: 20px 0;
+    animation: fadeSlideIn 0.8s ease-out both;
+  }
+
+  .verified-message-box .material-icons-outlined {
+    color: #00e676;
+    font-size: 22px;
+    margin-right: 12px;
+  }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .verified-message-box {
+      font-size: 14px;
+      padding: 12px 14px;
+    }
+    .verified-message-box .material-icons-outlined {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<!-- Final Message Box with Fixed Bengali Fonts -->
+<div class="verified-message-box">
+  <span class="material-icons-outlined">verified</span>
+  নিচে দেওয়া প্রতিটি গেম আইডি ১০০% যাচাই ও ভেরিফাইড — আপনার পছন্দের আইডিটি এখন চোখ বন্ধ করেই নিশ্চিন্তে কিনতে পারেন!
+</div><!-- Google Material Icons & Premium Fonts -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<style>
+  /* Scoped CSS for High Quality Premium Selection Box */
+  .premium-selection-box {
+    background: linear-gradient(145deg, #ff005c, #6a1b9a); /* Premium gradient background */
+    border-radius: 18px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1000;
+    margin: 40px 0;
+    text-align: center;
+    color: #fff;
+    border: 3px solid #ffeb3b; /* High-quality golden border */
+  }
+
+  .premium-selection-box .material-icons-outlined {
+    font-size: 40px;
+    color: #ffeb3b; /* Golden yellow color for the icon */
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .premium-selection-box .premium-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  /* Hover effect for Premium Box */
+  .premium-selection-box:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5); /* More prominent shadow effect on hover */
+  }
+
+  /* Media Query for responsiveness */
+  @media only screen and (max-width: 768px) {
+    .premium-selection-box {
+      padding: 25px 35px;
+    }
+    .premium-selection-box .material-icons-outlined {
+      font-size: 36px;
+    }
+    .premium-selection-box .premium-text {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<!-- High Quality Premium Selection Box -->
+<div class="premium-selection-box">
+  <span class="material-icons-outlined">stars</span>
+  <div class="premium-text">
+    Top Selection Free Fire Game ID - FOR Today
+  </div>
+</div>
+
+  <!-- Repeat this block for 20 cards -->
+  <div class="premium-card">
+    <div class="image-slider" id="slider1">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et58p2a/FB_IMG_1744634767502.jpg" alt="Image 1" style="display:block">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et58p2a/FB_IMG_1744634780245.jpg" alt="Image 2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et58p2a/FB_IMG_1744634783342.jpg" alt="Image 3">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et58p2a/FB_IMG_1744634790625.jpg" alt="Image 4">
+     
+    </div>
+    <div class="details">
+      <h3>Serial 1: <span contenteditable="true" id="itemId1"> <b>ID - 998877665</b></span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+      <p>Total Views: <span contenteditable="true">2K</span></p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">2200</span> TK</p>
+      <div class="button-row">
+        <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="des1.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+      </div>
+    </div>
+  </div>
+  <div class="premium-card">
+    <div class="image-slider" id="slider1">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43esy3yty/FB_IMG_1744629992433.jpg" alt="Image 1" style="display:block">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43esy3yty/FB_IMG_1744629995541.jpg" alt="Image 2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43esy3yty/FB_IMG_1744629999390.jpg" alt="Image 3">
+       <img src="https://assets.onecompiler.app/43ea4pg72/43esy3yty/FB_IMG_1744630013288.jpg" alt="Image 4">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et29jy3/FB_IMG_1744630007695.jpg" alt="Image 5">
+    </div>
+    <div class="details">
+      <h3>Serial 2: <span contenteditable="true" id="itemId1">ID - 548237614 </span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+      <p>Total Views: <span contenteditable="true">2.5K</span></p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">2000</span> TK</p>
+      <div class="button-row">
+        <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="des2.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+      </div>
+    </div>
+  </div>
+  <div class="premium-card">
+    <div class="image-slider" id="slider1">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et5g6mt/FB_IMG_1744634979815.jpg" alt="https://assets.onecompiler.app/43ea4pg72/43et5g6mt/FB_IMG_1744634979815.jpg" style="display:block">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et5g6mt/FB_IMG_1744634993266.jpg" alt="Image 2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et5g6mt/FB_IMG_1744635000149.jpg" alt="Image 3">
+       <img src="https://assets.onecompiler.app/43ea4pg72/43et5g6mt/FB_IMG_1744635006593.jpg" alt="Image 4">
+    </div>
+    <div class="details">
+      <h3>Serial 3 VIP : <span contenteditable="true" id="itemId1"> ID - 704521698</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+      <p>Total Views: <span contenteditable="true">3K</span></p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">5500</span> TK</p>
+      <div class="button-row">
+        <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="des3.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+      </div>
+    </div>
+  </div>
+<div class="premium-card">
+    <div class="image-slider" id="slider1">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6a9tz/FB_IMG_1744635741163.jpg" alt="Image 1" style="display:block">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6a9tz/FB_IMG_1744635743489.jpg" alt="Image 2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6a9tz/FB_IMG_1744635745814.jpg" alt="Image 3">
+    </div>
+    <div class="details">
+      <h3>Serial 4: <span contenteditable="true" id="itemId1">ID - 385920174</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+      <p>Total Views: <span contenteditable="true">1.5K</span></p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">2000</span> TK</p>
+      <div class="button-row">
+        <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="des4.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+      </div>
+    </div>
+  </div>
+<div class="premium-card">
+    <div class="image-slider" id="slider1">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6pzn7/FB_IMG_1744636116875.jpg" alt="Image 1" style="display:block">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6pzn7/FB_IMG_1744636139442.jpg" alt="Image 2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43et6pzn7/FB_IMG_1744636122763.jpg" alt="Image 3">
+    </div>
+    <div class="details">
+      <h3>Serial 5: <span contenteditable="true" id="itemId1">ID - 214365879</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+      <p>Total Views: <span contenteditable="true">1.9K</span></p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">1980</span> TK</p>
+      <div class="button-row">
+        <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="des5.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+      </div>
+    </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et78jyg/FB_IMG_1744636619859.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et78jyg/FB_IMG_1744636623153.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et78jyg/FB_IMG_1744636630001.jpg" alt="Image 3">
+  </div>
+  <div class="details">
+  <h3>Serial 6: <span contenteditable="true" id="itemId1">ID - 636404794</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">900</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1650</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des6.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et88wfv/FB_IMG_1744637537109.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et88wfv/FB_IMG_1744637539633.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et88wfv/FB_IMG_1744637543334.jpg" alt="Image 3">
+  </div>
+  <div class="details">
+  <h3>Serial 7: <span contenteditable="true" id="itemId1">ID - 259119986</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">1.2K</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1200</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des7.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8nwz3/FB_IMG_1744637841385.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8nwz3/FB_IMG_1744637846620.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8nwz3/FB_IMG_1744637942081.jpg" alt="Image 3">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8nwz3/FB_IMG_1744637946969.jpg" aly="Image 4">
+  </div>
+  <div class="details">
+  <h3>Serial 8: <span contenteditable="true" id="itemId1">ID - 916557410</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">2.2K</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">2300</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des8.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638172382.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638178726.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638196177.jpg" alt="Image 3">
+  </div>
+  <div class="details">
+  <h3>Serial 9: <span contenteditable="true" id="itemId1">ID - 391196428</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">1K</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1500</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des9.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638327710.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638340570.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43et8x3a7/FB_IMG_1744638344102.jpg" alt="Image 3">
+  </div>
+  <div class="details">
+  <h3>Serial 10: <span contenteditable="true" id="itemId1">ID - 1356624885</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">2.5K</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">3000</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des10.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <div class="premium-card">
+  <div class="image-slider" id="slider1">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43etagbm5/FB_IMG_1744638472326.jpg" alt="Image 1" style="display:block">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43etagbm5/FB_IMG_1744638490782.jpg" alt="Image 2">
+  <img src="https://assets.onecompiler.app/43ea4pg72/43etagbm5/FB_IMG_1744638495284.jpg" alt="Image 3">
+  </div>
+  <div class="details">
+  <h3>Serial 11: <span contenteditable="true" id="itemId1">ID - 2182943585</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
+  <p>Total Views: <span contenteditable="true">1.7K</span></p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1800</span> TK</p>
+  <div class="button-row">
+  <a href="#" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="des11.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
+  </div>
+  </div>
+  </div>
+  <!-- Repeat Ends -->
+</div><script>
+  function toggleMenu() {
+    const menu = document.getElementById('menuDropdown');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function buyNow(id) {
+    const price = document.getElementById(id).innerText.trim();
+    localStorage.setItem("purchaseAmount", price);
+    window.location.href = "buy.html";
+  }
+
+  // Slider animation for all sliders (can be expanded for more sliders)
+  const sliders = document.querySelectorAll(".image-slider");
+  sliders.forEach((slider, index) => {
+    let current = 0;
+    const images = slider.querySelectorAll("img");
+    setInterval(() => {
+      images[current].style.display = 'none';
+      current = (current + 1) % images.length;
+      images[current].style.display = 'block';
+    }, 3000);
+  });
+</script><!-- Firebase SDK --><script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwiUR6oJRjTBFa2ajTdb-5Owc_I6Dw2S0",
+    authDomain: "fir-bot-bd5e8.firebaseapp.com",
+    databaseURL: "https://fir-bot-bd5e8-default-rtdb.firebaseio.com",
+    projectId: "fir-bot-bd5e8",
+    storageBucket: "fir-bot-bd5e8.firebasestorage.app",
+    messagingSenderId: "501448994050",
+    appId: "1:501448994050:web:fb1c102dcaeb23bf93261b",
+    measurementId: "G-3ERPTBHN6N"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script></body>
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>ZEROX ID SALE BD - Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <style>
+    /* Footer Specific CSS */
+    .zeroX-footer {
+      background-color: #0d0d0d;
+      color: #ccc;
+      padding: 40px 20px;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      text-align: center;
+    }
+
+    .zeroX-footer h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .zeroX-footer .footer-links span {
+      margin: 8px;
+      color: #aaa;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .zeroX-footer .footer-icons a {
+      display: inline-block;
+      margin: 10px 8px;
+      border: 1px solid #f5b301;
+      border-radius: 6px;
+      padding: 8px;
+      color: #f5b301;
+      transition: 0.3s;
+    }
+
+    .zeroX-footer .footer-icons a:hover {
+      background-color: #f5b301;
+      color: #000;
+    }
+
+    .zeroX-footer .footer-icons .material-icons-outlined {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+
+    .zeroX-footer .copyright {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Footer Section -->
+  <footer class="zeroX-footer">
+    <div>
+      <h3>জনপ্রিয় মার্কেট</h3>
+      <div class="footer-links">
+        <span>ফ্রি ফায়ার আইডি</span>
+        <span>পাবজি ইউসি</span>
+        <span>ভ্যালোরেন্ট আইডি</span>
+        <span>টপ আপ সার্ভিস</span>
+        <span>ডায়মন্ড প্যাকেজ</span>
+        <span>গেমিং এক্সেসরিজ</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>টুলস এবং সার্ভিস</h3>
+      <div class="footer-links">
+        <span>আইডি ভ্যালু চেকার</span>
+        <span>অ্যাকাউন্ট প্রাইস ক্যালকুলেটর</span>
+        <span>রিয়েল টাইম মার্কেট রেট</span>
+      </div>
+    </div>
+
+    <div class="footer-icons" style="margin-top: 25px;">
+      <a href="#"><span class="material-icons-outlined">facebook</span></a>
+      <a href="#"><span class="material-icons-outlined">chat</span></a>
+      <a href="#"><span class="material-icons-outlined">smart_display</span></a>
+      <a href="#"><span class="material-icons-outlined">share</span></a>
+    </div>
+
+    <div class="copyright">
+      © ২০২৫ ZEROX ID SALE BD. সর্বস্বত্ব সংরক্ষিত।
+    </div>
+  </footer>
+
+</body>
+</html>
