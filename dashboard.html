@@ -612,11 +612,11 @@
     const menu = document.getElementById('menuDropdown');
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   }
-
-  function buyNow(id) {
-    const price = document.getElementById(id).innerText.trim();
-    localStorage.setItem("purchaseAmount", ${price}`);
-    window.location.href = "buy.html";
+function buyNow(id) {
+  const price = document.getElementById(id).innerText.trim();
+  localStorage.setItem("purchaseAmount", `৳${price}`);
+  window.location.href = "buy.html";
+}
   }
 
   // Slider animation for all sliders (can be expanded for more sliders)
