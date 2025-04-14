@@ -615,7 +615,7 @@
 
   function buyNow(id) {
     const price = document.getElementById(id).innerText.trim();
-    localStorage.setItem("purchaseAmount", price);
+    localStorage.setItem("purchaseAmount", ${price}`);
     window.location.href = "buy.html";
   }
 
