@@ -109,23 +109,48 @@
 </head>
 
 <body>
+<!-- Head Section (UTF-8 charset & font) -->
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&family=Material+Icons+Outlined" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Zerox Premium Popup -->
-  <div id="zerox-popup" class="zerox-overlay">
-    <div class="zerox-box">
-      <span class="material-icons close-btn" onclick="document.getElementById('zerox-popup').style.display='none'">close</span>
-      <div class="zerox-header">
-        <img src="https://assets.onecompiler.app/43ea4pg72/43etpeenw/gamer.gif" alt="Premium Icon" class="premium-icon"/>
-        <h2>Zerox ID Sale BD</h2>
-      </div>
-      <div class="popup-text">
-        <p>আপনার বিশ্বস্ত গেমিং আইডি <span class="highlight">Buy/Sale</span> প্ল্যাটফর্ম!</p>
-        <p>এখন থেকে আপনার পছন্দমতো আইডি সহজেই <span class="highlight">ক্রয়</span> বা <span class="highlight">বিক্রয়</span> করুন নিরাপদভাবে।</p>
-        <p>প্রতারণা এড়াতে আমাদের বিশ্বস্ত সার্ভিস ব্যবহার করুন এবং নিশ্চিন্তে লেনদেন করুন।</p>
-        <p class="thanks">ধন্যবাদ আমাদের সাথে থাকার জন্য!</p>
-      </div>
+<!-- Zerox Popup Modal - সর্বোচ্চ স্তরে থাকবে -->
+<div id="maintenancePopup" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-40 px-4">
+  <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm p-5 text-gray-800 text-[13px]"
+       style="font-family: 'Noto Sans Bengali', sans-serif;">
+       
+    <!-- Close Button -->
+    <button onclick="document.getElementById('maintenancePopup').style.display='none'"
+            class="absolute top-3 right-3 text-gray-500 hover:text-red-500 z-[10000]">
+      <span class="material-icons-outlined text-[20px]">close</span>
+    </button>
+
+    <!-- Header -->
+    <div class="flex items-center mb-3">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43etpeenw/gamer.gif" alt="Zerox Icon" class="h-8 w-8 mr-2 rounded-full shadow-md">
+      <h2 class="text-sm font-bold bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+        Zerox ID Sale BD
+      </h2>
+    </div>
+
+    <!-- Message and Content -->
+    <p class="mb-3 leading-snug">
+      আপনার বিশ্বস্ত <strong>গেমিং আইডি</strong> কেনা-বেচার প্ল্যাটফর্মে স্বাগতম। নিরাপদ এবং সহজ লেনদেন এখন হাতের মুঠোয়।
+    </p>
+
+    <div class="bg-indigo-50 text-indigo-800 rounded-md p-3 text-center font-semibold leading-snug text-[12px] mb-3">
+      <p><strong>ক্রয় করুন</strong> আপনার পছন্দের প্রিমিয়াম আইডি</p>
+      <p><strong>বিক্রয় করুন</strong> আপনার গেমিং আইডি নিরাপদভাবে</p>
+      <p class="text-pink-600 mt-1">প্রতারণা ছাড়া ১০০% ট্রাস্টেড সার্ভিস!</p>
+    </div>
+
+    <!-- Helpline -->
+    <div class="flex items-center text-gray-600 text-xs">
+      <span class="material-icons-outlined text-purple-600 text-sm mr-1">headset_mic</span>
+      <span>হেল্পলাইন:<strong> 01800-000000</strong></span>
     </div>
   </div>
+</div>
 
 </body>
 </html>
@@ -453,9 +478,9 @@
     <div class="details">
       <h3>Serial 2: <span contenteditable="true" id="itemId1">ID - 548237614 </span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
       <p>Total Views: <span contenteditable="true">2.5K</span></p>
-      <p>Price: <span contenteditable="true" id="itemPrice2">2000</span> TK</p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">2000</span> TK</p>
       <div class="button-row">
-        <a href="buy2.html" class="buy-button" onclick="buyNow('itemPrice2')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="buy2.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
         <a href="des2.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
       </div>
     </div>
@@ -470,9 +495,9 @@
     <div class="details">
       <h3>Serial 3 VIP : <span contenteditable="true" id="itemId1"> ID - 704521698</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
       <p>Total Views: <span contenteditable="true">3K</span></p>
-      <p>Price: <span contenteditable="true" id="itemPrice3">5500</span> TK</p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">5500</span> TK</p>
       <div class="button-row">
-        <a href="buy3.html" class="buy-button" onclick="buyNow('itemPrice3')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="buy3.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
         <a href="des3.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
       </div>
     </div>
@@ -486,9 +511,9 @@
     <div class="details">
       <h3>Serial 4: <span contenteditable="true" id="itemId1">ID - 385920174</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
       <p>Total Views: <span contenteditable="true">1.5K</span></p>
-      <p>Price: <span contenteditable="true" id="itemPrice4">2000</span> TK</p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">2000</span> TK</p>
       <div class="button-row">
-        <a href="buy4.html" class="buy-button" onclick="buyNow('itemPrice4')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="buy4.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
         <a href="des4.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
       </div>
     </div>
@@ -502,9 +527,9 @@
     <div class="details">
       <h3>Serial 5: <span contenteditable="true" id="itemId1">ID - 214365879</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
       <p>Total Views: <span contenteditable="true">1.9K</span></p>
-      <p>Price: <span contenteditable="true" id="itemPrice5">1980</span> TK</p>
+      <p>Price: <span contenteditable="true" id="itemPrice1">1980</span> TK</p>
       <div class="button-row">
-        <a href="buy5.html" class="buy-button" onclick="buyNow('itemPrice5')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+        <a href="buy5.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
         <a href="des5.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
       </div>
     </div>
@@ -518,9 +543,9 @@
   <div class="details">
   <h3>Serial 6: <span contenteditable="true" id="itemId1">ID - 636404794</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">900</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice6">1650</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1650</span> TK</p>
   <div class="button-row">
-  <a href="buy6.html" class="buy-button" onclick="buyNow('itemPrice6')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy6.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des6.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -534,9 +559,9 @@
   <div class="details">
   <h3>Serial 7: <span contenteditable="true" id="itemId1">ID - 259119986</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">1.2K</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice7">1200</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1200</span> TK</p>
   <div class="button-row">
-  <a href="buy7.html" class="buy-button" onclick="buyNow('itemPrice7')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy7.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des7.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -551,9 +576,9 @@
   <div class="details">
   <h3>Serial 8: <span contenteditable="true" id="itemId1">ID - 916557410</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">2.2K</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice8">2300</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">2300</span> TK</p>
   <div class="button-row">
-  <a href="buy8.html" class="buy-button" onclick="buyNow('itemPrice8')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy8.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des8.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -567,9 +592,9 @@
   <div class="details">
   <h3>Serial 9: <span contenteditable="true" id="itemId1">ID - 391196428</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">1K</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice9">1500</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1500</span> TK</p>
   <div class="button-row">
-  <a href="buy9.html" class="buy-button" onclick="buyNow('itemPrice9')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy9.html class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des9.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -583,9 +608,9 @@
   <div class="details">
   <h3>Serial 10: <span contenteditable="true" id="itemId1">ID - 1356624885</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">2.5K</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice10">3000</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">3000</span> TK</p>
   <div class="button-row">
-  <a href="buy10.html" class="buy-button" onclick="buyNow('itemPrice10')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy10.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des10.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -599,9 +624,9 @@
   <div class="details">
   <h3>Serial 11: <span contenteditable="true" id="itemId1">ID - 2182943585</span> <span class="material-icons-outlined premium">workspace_premium</span></h3>
   <p>Total Views: <span contenteditable="true">1.7K</span></p>
-  <p>Price: <span contenteditable="true" id="itemPrice11">1800</span> TK</p>
+  <p>Price: <span contenteditable="true" id="itemPrice1">1800</span> TK</p>
   <div class="button-row">
-  <a href="buy11.html" class="buy-button" onclick="buyNow('itemPrice11')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
+  <a href="buy11.html" class="buy-button" onclick="buyNow('itemPrice1')"><span class="material-icons-round">shopping_cart</span>Buy Now</a>
   <a href="des11.html" class="desc-button"><span class="material-icons-round">info</span>Description</a>
   </div>
   </div>
@@ -612,11 +637,11 @@
     const menu = document.getElementById('menuDropdown');
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   }
-function buyNow(id) {
-  const price = document.getElementById(id).innerText.trim();
-  localStorage.setItem("purchaseAmount", `৳${price}`);
-  window.location.href = "buy.html";
-}
+
+  function buyNow(id) {
+    const price = document.getElementById(id).innerText.trim();
+    localStorage.setItem("purchaseAmount", price);
+    window.location.href = "buy.html";
   }
 
   // Slider animation for all sliders (can be expanded for more sliders)
