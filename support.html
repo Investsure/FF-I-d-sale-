@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI সহায়তা বট</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #f1f4f9;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      width: 95%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #1976d2;
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-header i {
+      font-size: 28px;
+    }
+
+    .chat-header h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .chat-body {
+      padding: 20px;
+      height: 400px;
+      overflow-y: auto;
+      background: #f9fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chat-msg {
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      line-height: 1.5;
+      font-size: 15px;
+      white-space: pre-wrap;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .bot {
+      align-self: flex-start;
+      background: #e3f2fd;
+      color: #333;
+    }
+
+    .user {
+      align-self: flex-end;
+      background: #1976d2;
+      color: white;
+    }
+
+    .typing {
+      font-style: italic;
+      color: #888;
+      padding-left: 10px;
+    }
+
+    .chat-footer {
+      background: #ffffff;
+      padding: 16px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-footer button {
+      padding: 12px 16px;
+      background: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 15px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s;
+    }
+
+    .chat-footer button:hover {
+      background: #125ea8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat-wrapper">
+  <div class="chat-header">
+    <i class="material-icons-round">smart_toy</i>
+    <h2> Zerox AI সহায়তা বট</h2>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">হ্যালো! কী জানতে চান নিচের অপশন থেকে বেছে নিন:</div>
+  </div>
+
+  <div class="chat-footer">
+    <button onclick="sendMessage('পেমেন্ট সংক্রান্ত সমস্যা')">
+      <i class="material-icons-round">payments</i> পেমেন্ট সংক্রান্ত সমস্যা
+    </button>
+    <button onclick="sendMessage('কিভাবে আইডি ক্রয় করবো')">
+      <i class="material-icons-round">shopping_cart</i> কিভাবে আইডি ক্রয় করবো
+    </button>
+    <button onclick="sendMessage('কাস্টমার সাপোর্ট প্রয়োজন')">
+      <i class="material-icons-round">support_agent</i> কাস্টমার সাপোর্ট প্রয়োজন
+    </button>
+  </div>
+</div>
+
+<script>
+  const chatBody = document.getElementById('chatBody');
+
+  function sendMessage(text) {
+    addMessage(text, 'user');
+    showTyping();
+    setTimeout(() => {
+      removeTyping();
+      generateBotReply(text);
+    }, 1500);
+  }
+
+  function addMessage(text, type) {
+    const msg = document.createElement('div');
+    msg.className = `chat-msg ${type}`;
+    msg.innerText = text;
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function showTyping() {
+    const typing = document.createElement('div');
+    typing.className = 'chat-msg bot typing';
+    typing.id = 'typingIndicator';
+    typing.innerText = 'টাইপ করছে...';
+    chatBody.appendChild(typing);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function removeTyping() {
+    const typing = document.getElementById('typingIndicator');
+    if (typing) typing.remove();
+  }
+
+  function generateBotReply(question) {
+    let reply = '';
+    if (question === 'পেমেন্ট সংক্রান্ত সমস্যা') {
+      reply = `আপনার পেমেন্ট সংক্রান্ত সমস্যাটি কয়েকটি কারণে হতে পারে:
+১) আপনি ভুল ট্রানজ্যাকশন আইডি দিয়েছেন।
+২) সার্ভার সমস্যার কারণে পেমেন্ট শো করছে না।
+✅ সঠিক তথ্য দিয়েও সমস্যা থাকলে নিচের WhatsApp নম্বরে স্ক্রিনশট পাঠান:
+📞 01824-435448`;
+    } else if (question === 'কিভাবে আইডি ক্রয় করবো') {
+      reply = `আইডি ক্রয় করতে:
+১) ক্রয় পেইজে যান।
+২) পছন্দমত ID বেছে নিয়ে ক্রয় করুন।
+৩) সঠিক ভাবে পেমেন্ট সম্পন্ন করুন এবং সঠিক ট্রানজ্যাকশন আইডি জমা দিন।
+৪) ৫-১০ মিনিট অপেক্ষা করুন, আপনার দেওয়া WhatsApp নম্বরে যোগাযোগ করা হবে।`;
+    } else if (question === 'কাস্টমার সাপোর্ট প্রয়োজন') {
+      reply = `আমাদের কাস্টমার সাপোর্ট ২৪/৭ খোলা:
+WhatsApp: 01824-435448`;
+    }
+
+    addMessage(reply, 'bot');
+  }
+</script>
+
+</body>
+</html>
