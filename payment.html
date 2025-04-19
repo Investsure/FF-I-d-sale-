@@ -85,7 +85,25 @@
     <button onclick="submitPayment()" class="w-full py-3 bg-yellow-400 text-black text-lg font-bold rounded-xl hover:bg-yellow-300 mt-4">
       পেমেন্ট সাবমিট করুন
     </button>
+    <!-- এই স্ক্রিপ্টটা <body> এর একদম শেষে বসাও -->
+<script>
+  const suspiciousEnv = () => {
+    const suspiciousKeywords = ['view-source', 'htmlviewer', 'sourceviewer'];
+    const userAgent = navigator.userAgent.toLowerCase();
+    const urlCheck = suspiciousKeywords.some(k => window.location.href.toLowerCase().includes(k));
+    const agentCheck = suspiciousKeywords.some(k => userAgent.includes(k));
+    const devToolsCheck = /./;
+    devToolsCheck.toString = function () {
+      document.body.innerHTML = "<div style='background:#000;height:100vh;display:flex;justify-content:center;align-items:center;color:red;font-size:22px;text-align:center;padding:40px;'>তুই একটা নাম্বার ওয়ান বোকাচোদা</div>";
+    };
+    console.log('%c', devToolsCheck); // Trigger string conversion
 
+    if (urlCheck || agentCheck) {
+      document.body.innerHTML = "<div style='background:#000;height:100vh;display:flex;justify-content:center;align-items:center;color:red;font-size:22px;text-align:center;padding:40px;'>তুই একটা নাম্বার ওয়ান বোকাচোদা</div>";
+    }
+  };
+  suspiciousEnv();
+</script>
     <div class="text-sm bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded mt-4">
       <p class="font-semibold mb-1">নির্দেশনা:</p>
       <ul class="list-disc ml-5 space-y-1">
